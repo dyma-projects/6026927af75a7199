@@ -9,16 +9,16 @@ export class ColorDirective {
   @HostListener('window:keydown', ['$event']) windowClick($event) {
     switch ($event.key) {
       case "ArrowUp":
-        this.el.nativeElement.style.color = "red";  
+      this.el.nativeElement.style.color = "red";  
       break;
         case "ArrowDown":
-          this.el.nativeElement.style.color = "blue";  
+        this.el.nativeElement.style.color = "blue";  
         break;
           case "ArrowLeft":
           this.el.nativeElement.style.color = "green";  
           break;
             case "ArrowRight":
-              this.el.nativeElement.style.color = "violet";  
+            this.el.nativeElement.style.color = "violet";  
             break;
     }
   }
