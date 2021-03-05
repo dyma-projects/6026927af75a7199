@@ -6,7 +6,7 @@ import { Directive } from '@angular/core';
 })
 export class ColorDirective {
 
-  @HostListener('window:keydown', ['$event']) windowClick($event) {
+  @HostListener('window:keydown', ['$event']) windowKeydown($event) {
     switch ($event.key) {
       case "ArrowUp":
       this.el.nativeElement.style.color = "red";  
@@ -21,6 +21,10 @@ export class ColorDirective {
             this.el.nativeElement.style.color = "violet";  
             break;
     }
+  }
+
+  @HostListener('window:keyup', ['$event']) windowKeyup() {
+    this.el.nativeElement.style.color = "unset";
   }
 
 
